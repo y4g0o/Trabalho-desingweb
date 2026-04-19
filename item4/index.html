@@ -2,171 +2,160 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Item 4 — NovaCast</title>
+  <title>Item 4</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  
-  <header class="site-header">
-    <div class="header-left">
-      <button class="menu-toggle">&#9776;</button>
-      <div class="logo">
-        <span class="logo-icon">&#9672;</span>
-        <span class="logo-text">NovaCast</span>
+  <div id="header">
+    <div id="header-esq">
+      <button id="btn-menu">&#9776;</button>
+      <div id="logo">
+        <span id="logo-icone">&#9672;</span>
+        <span id="logo-texto">NovaCast</span>
       </div>
     </div>
 
-    <div class="header-center">
-      <div class="search-wrap">
-        <input type="text" class="search-input" placeholder="Buscar v&iacute;deos, m&uacute;sicas, canais..." value="Synthwave 2026" />
-        <button class="search-btn">&#9906;</button>
+    <div id="header-centro">
+      <div id="caixa-busca">
+        <input type="text" id="campo-busca" value="Synthwave 2026" placeholder="Buscar v&iacute;deos..." />
+        <button id="btn-busca">&#9906;</button>
       </div>
     </div>
 
-    <div class="header-right">
-      <button class="notify-btn">&#9825;</button>
-      <button class="login-btn">&#9675; Entrar</button>
+    <div id="header-dir">
+      <button id="btn-sino">&#9825;</button>
+      <button id="btn-entrar">&#9675; Entrar</button>
     </div>
-  </header>
+  </div>
 
-  <div class="layout">
+  <div id="layout">
 
-    
-    <aside class="sidebar">
-      <nav class="sidebar-nav">
-        <a href="#" class="nav-item active">
-          <span class="nav-icon">&#8962;</span>
-          <span>In&iacute;cio</span>
-          <span class="nav-arrow">&#8250;</span>
-        </a>
-        <a href="#" class="nav-item">
-          <span class="nav-icon">&#9889;</span>
-          <span>Em Alta</span>
-        </a>
-        <a href="#" class="nav-item">
-          <span class="nav-icon">&#9873;</span>
-          <span>Inscri&ccedil;&otilde;es</span>
-        </a>
-        <a href="#" class="nav-item">
-          <span class="nav-icon">&#9635;</span>
-          <span>Biblioteca</span>
-        </a>
-        <a href="#" class="nav-item">
-          <span class="nav-icon">&#9679;</span>
-          <span>Hist&oacute;rico</span>
-        </a>
-        <div class="nav-divider"></div>
-        <a href="#" class="nav-item">
-          <span class="nav-icon">&#9733;</span>
-          <span>Favoritos</span>
-        </a>
-        <a href="#" class="nav-item">
-          <span class="nav-icon">&#8987;</span>
-          <span>Assistir Depois</span>
-        </a>
-      </nav>
-    </aside>
+    <div id="sidebar">
+      <a href="#" class="nav-item ativo">
+        <span class="nav-ic">&#8962;</span>
+        <span>In&iacute;cio</span>
+        <span class="seta">&#8250;</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-ic">&#9889;</span>
+        <span>Em Alta</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-ic">&#9873;</span>
+        <span>Inscri&ccedil;&otilde;es</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-ic">&#9635;</span>
+        <span>Biblioteca</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-ic">&#9679;</span>
+        <span>Hist&oacute;rico</span>
+      </a>
+      <hr class="div-nav">
+      <a href="#" class="nav-item">
+        <span class="nav-ic">&#9733;</span>
+        <span>Favoritos</span>
+      </a>
+      <a href="#" class="nav-item">
+        <span class="nav-ic">&#8987;</span>
+        <span>Assistir Depois</span>
+      </a>
+    </div>
 
-    
-    <main class="content">
+    <div id="conteudo">
 
-      <div class="section-label">Resultados para <strong>"Synthwave 2026"</strong></div>
+      <p id="label-busca">Resultados para <strong>"Synthwave 2026"</strong></p>
 
-      <div class="video-grid">
+      <div id="grade-videos">
 
-        
-        <article class="video-card">
-          <div class="thumb" style="background: linear-gradient(135deg, #cba6f7 0%, #89b4fa 100%);">
-            <span class="duration">32:14</span>
+        <div class="card-video">
+          <div class="thumb" style="background: linear-gradient(135deg, #cba6f7, #89b4fa);">
+            <span class="duracao">32:14</span>
           </div>
-          <div class="card-info">
-            <div class="channel-avatar" style="background: linear-gradient(135deg, #cba6f7, #f5c2e7);"></div>
-            <div class="video-meta">
-              <p class="video-title">Neon Requiem &mdash; &Aacute;lbum Completo</p>
-              <p class="channel-name">Synthwave Collective</p>
-              <p class="video-stats">200k visualiza&ccedil;&otilde;es &bull; h&aacute; 3 dias</p>
+          <div class="info-card">
+            <div class="avatar-canal" style="background: linear-gradient(135deg, #cba6f7, #f5c2e7);"></div>
+            <div class="meta-video">
+              <p class="titulo-video">Neon Requiem &mdash; &Aacute;lbum Completo</p>
+              <p class="nome-canal">Synthwave Collective</p>
+              <p class="stats-video">200k visualiza&ccedil;&otilde;es &bull; h&aacute; 3 dias</p>
             </div>
           </div>
-        </article>
+        </div>
 
-        
-        <article class="video-card">
-          <div class="thumb" style="background: linear-gradient(135deg, #94e2d5 0%, #89b4fa 100%);">
-            <span class="duration">18:47</span>
+        <div class="card-video">
+          <div class="thumb" style="background: linear-gradient(135deg, #94e2d5, #89b4fa);">
+            <span class="duracao">18:47</span>
           </div>
-          <div class="card-info">
-            <div class="channel-avatar" style="background: linear-gradient(135deg, #94e2d5, #89b4fa);"></div>
-            <div class="video-meta">
-              <p class="video-title">Violet Protocol &mdash; Live Session</p>
-              <p class="channel-name">Aurora Drive</p>
-              <p class="video-stats">84k visualiza&ccedil;&otilde;es &bull; h&aacute; 1 semana</p>
+          <div class="info-card">
+            <div class="avatar-canal" style="background: linear-gradient(135deg, #94e2d5, #89b4fa);"></div>
+            <div class="meta-video">
+              <p class="titulo-video">Violet Protocol &mdash; Live Session</p>
+              <p class="nome-canal">Aurora Drive</p>
+              <p class="stats-video">84k visualiza&ccedil;&otilde;es &bull; h&aacute; 1 semana</p>
             </div>
           </div>
-        </article>
+        </div>
 
-        
-        <article class="video-card">
-          <div class="thumb" style="background: linear-gradient(135deg, #f38ba8 0%, #fab387 100%);">
-            <span class="duration">44:02</span>
+        <div class="card-video">
+          <div class="thumb" style="background: linear-gradient(135deg, #f38ba8, #fab387);">
+            <span class="duracao">44:02</span>
           </div>
-          <div class="card-info">
-            <div class="channel-avatar" style="background: linear-gradient(135deg, #f38ba8, #fab387);"></div>
-            <div class="video-meta">
-              <p class="video-title">Midnight Grid &mdash; Retrowave Mix</p>
-              <p class="channel-name">NightDrive FM</p>
-              <p class="video-stats">1,2M visualiza&ccedil;&otilde;es &bull; h&aacute; 2 semanas</p>
+          <div class="info-card">
+            <div class="avatar-canal" style="background: linear-gradient(135deg, #f38ba8, #fab387);"></div>
+            <div class="meta-video">
+              <p class="titulo-video">Midnight Grid &mdash; Retrowave Mix</p>
+              <p class="nome-canal">NightDrive FM</p>
+              <p class="stats-video">1,2M visualiza&ccedil;&otilde;es &bull; h&aacute; 2 semanas</p>
             </div>
           </div>
-        </article>
+        </div>
 
-        
-        <article class="video-card">
-          <div class="thumb" style="background: linear-gradient(135deg, #a6e3a1 0%, #94e2d5 100%);">
-            <span class="duration">09:33</span>
+        <div class="card-video">
+          <div class="thumb" style="background: linear-gradient(135deg, #a6e3a1, #94e2d5);">
+            <span class="duracao">09:33</span>
           </div>
-          <div class="card-info">
-            <div class="channel-avatar" style="background: linear-gradient(135deg, #a6e3a1, #94e2d5);"></div>
-            <div class="video-meta">
-              <p class="video-title">Como produzir Synthwave em 2026</p>
-              <p class="channel-name">Beat Lab</p>
-              <p class="video-stats">320k visualiza&ccedil;&otilde;es &bull; h&aacute; 5 dias</p>
+          <div class="info-card">
+            <div class="avatar-canal" style="background: linear-gradient(135deg, #a6e3a1, #94e2d5);"></div>
+            <div class="meta-video">
+              <p class="titulo-video">Como produzir Synthwave em 2026</p>
+              <p class="nome-canal">Beat Lab</p>
+              <p class="stats-video">320k visualiza&ccedil;&otilde;es &bull; h&aacute; 5 dias</p>
             </div>
           </div>
-        </article>
+        </div>
 
-        
-        <article class="video-card">
-          <div class="thumb" style="background: linear-gradient(135deg, #b4befe 0%, #cba6f7 100%);">
-            <span class="duration">1:22:10</span>
+        <div class="card-video">
+          <div class="thumb" style="background: linear-gradient(135deg, #b4befe, #cba6f7);">
+            <span class="duracao">1:22:10</span>
           </div>
-          <div class="card-info">
-            <div class="channel-avatar" style="background: linear-gradient(135deg, #b4befe, #cba6f7);"></div>
-            <div class="video-meta">
-              <p class="video-title">Outrun Cosmos &mdash; Drive Playlist</p>
-              <p class="channel-name">Cosmos Retro</p>
-              <p class="video-stats">540k visualiza&ccedil;&otilde;es &bull; h&aacute; 1 m&ecirc;s</p>
+          <div class="info-card">
+            <div class="avatar-canal" style="background: linear-gradient(135deg, #b4befe, #cba6f7);"></div>
+            <div class="meta-video">
+              <p class="titulo-video">Outrun Cosmos &mdash; Drive Playlist</p>
+              <p class="nome-canal">Cosmos Retro</p>
+              <p class="stats-video">540k visualiza&ccedil;&otilde;es &bull; h&aacute; 1 m&ecirc;s</p>
             </div>
           </div>
-        </article>
+        </div>
 
-        
-        <article class="video-card">
-          <div class="thumb" style="background: linear-gradient(135deg, #f9e2af 0%, #fab387 100%);">
-            <span class="duration">27:55</span>
+        <div class="card-video">
+          <div class="thumb" style="background: linear-gradient(135deg, #f9e2af, #fab387);">
+            <span class="duracao">27:55</span>
           </div>
-          <div class="card-info">
-            <div class="channel-avatar" style="background: linear-gradient(135deg, #f9e2af, #fab387);"></div>
-            <div class="video-meta">
-              <p class="video-title">Golden Hour Synthwave &mdash; Sunset Mix</p>
-              <p class="channel-name">SolarDrift</p>
-              <p class="video-stats">97k visualiza&ccedil;&otilde;es &bull; h&aacute; 4 dias</p>
+          <div class="info-card">
+            <div class="avatar-canal" style="background: linear-gradient(135deg, #f9e2af, #fab387);"></div>
+            <div class="meta-video">
+              <p class="titulo-video">Golden Hour Synthwave &mdash; Sunset Mix</p>
+              <p class="nome-canal">SolarDrift</p>
+              <p class="stats-video">97k visualiza&ccedil;&otilde;es &bull; h&aacute; 4 dias</p>
             </div>
           </div>
-        </article>
+        </div>
 
       </div>
-    </main>
+    </div>
 
   </div>
 
