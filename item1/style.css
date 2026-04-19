@@ -1,0 +1,479 @@
+/* ================================================
+   Catppuccin Mocha — Hyprland Dark
+   Item 1: NovaTune Mobile + Impressora 3D
+   ================================================ */
+:root {
+  --crust:    #11111b;
+  --mantle:   #181825;
+  --base:     #1e1e2e;
+  --surface0: #313244;
+  --surface1: #45475a;
+  --surface2: #585b70;
+  --overlay0: #6c7086;
+  --text:     #cdd6f4;
+  --subtext0: #a6adc8;
+  --subtext1: #bac2de;
+  --mauve:    #cba6f7;
+  --blue:     #89b4fa;
+  --teal:     #94e2d5;
+  --peach:    #fab387;
+  --red:      #f38ba8;
+  --green:    #a6e3a1;
+  --pink:     #f5c2e7;
+  --lavender: #b4befe;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--crust);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.showcase {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.frame-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.frame-label {
+  color: var(--mauve);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* ---- PHONE ---- */
+
+.phone {
+  width: 290px;
+  background: var(--base);
+  border: 1px solid var(--surface1);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px var(--surface0),
+    0 0 40px rgba(203, 166, 247, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.phone-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--mantle);
+  border-bottom: 1px solid var(--surface0);
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--subtext1);
+  cursor: pointer;
+  font-size: 1.05rem;
+  padding: 0.2rem 0.35rem;
+  border-radius: 5px;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s;
+}
+.icon-btn:hover {
+  background: var(--surface0);
+  color: var(--text);
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--surface0);
+  border: 1px solid var(--surface1);
+  border-radius: 7px;
+  padding: 0.3rem 0.65rem;
+}
+.search-icon {
+  color: var(--overlay0);
+  font-size: 0.85rem;
+}
+.search-placeholder {
+  color: var(--overlay0);
+  font-size: 0.78rem;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--mauve), var(--blue));
+  color: var(--crust);
+  border: none;
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.phone-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-bottom: 1px solid var(--surface0);
+}
+.phone-nav.secondary {
+  padding-top: 0.7rem;
+  padding-bottom: 0.75rem;
+  border-bottom: none;
+}
+
+.nav-title {
+  flex: 1;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+.nav-title.large {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ---- Content ---- */
+
+.phone-content {
+  padding: 0 0.9rem 0.9rem;
+}
+
+.album-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  background: var(--surface0);
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  border-left: 3px solid var(--mauve);
+}
+
+.album-art {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--mauve) 0%, var(--blue) 60%, var(--teal) 100%);
+  flex-shrink: 0;
+}
+
+.album-info { flex: 1; min-width: 0; }
+.track-name {
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.track-artist {
+  color: var(--subtext0);
+  font-size: 0.72rem;
+  margin-top: 0.15rem;
+}
+
+.play-state {
+  color: var(--mauve);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding: 0 0.1rem;
+}
+.time {
+  color: var(--overlay0);
+  font-size: 0.65rem;
+  font-family: monospace;
+  flex-shrink: 0;
+}
+.progress-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--surface1);
+  border-radius: 2px;
+  position: relative;
+}
+.progress-fill {
+  width: 38%;
+  height: 100%;
+  background: linear-gradient(to right, var(--mauve), var(--blue));
+  border-radius: 2px;
+}
+.progress-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--mauve);
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 6px rgba(203, 166, 247, 0.6);
+}
+
+/* ---- Track list ---- */
+
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.45rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+  border-left: 2px solid transparent;
+}
+.track-item:hover {
+  background: var(--surface0);
+}
+.track-item.active {
+  background: rgba(203, 166, 247, 0.08);
+  border-left-color: var(--mauve);
+}
+
+.track-num {
+  color: var(--overlay0);
+  font-size: 0.65rem;
+  font-weight: 700;
+  font-family: monospace;
+  width: 18px;
+  text-align: center;
+}
+.track-item.active .track-num {
+  color: var(--mauve);
+}
+
+.track-details {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 0;
+}
+.t-name {
+  color: var(--subtext1);
+  font-size: 0.78rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.track-item.active .t-name {
+  color: var(--text);
+  font-weight: 500;
+}
+.t-dur {
+  color: var(--overlay0);
+  font-size: 0.7rem;
+  font-family: monospace;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+/* ---- Bottom bar ---- */
+
+.phone-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.65rem 0.9rem;
+  background: var(--mantle);
+  border-top: 1px solid var(--surface0);
+}
+.bottom-btn {
+  background: none;
+  border: none;
+  color: var(--subtext1);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 6px;
+  transition: color 0.15s;
+}
+.bottom-btn:hover { color: var(--text); }
+.bottom-btn.plus {
+  background: var(--mauve);
+  color: var(--crust);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 0 12px rgba(203, 166, 247, 0.4);
+}
+
+/* ================================================
+   DESKTOP APP — Impressora 3D
+   ================================================ */
+
+.desktop-app {
+  width: 340px;
+  background: var(--base);
+  border: 1px solid var(--surface1);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px var(--surface0),
+    0 0 40px rgba(203, 166, 247, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.titlebar {
+  display: flex;
+  align-items: center;
+  padding: 0.55rem 0.8rem;
+  background: var(--crust);
+  border-bottom: 1px solid var(--surface0);
+  gap: 0.5rem;
+}
+
+.titlebar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.app-icon-box {
+  color: var(--mauve);
+  font-size: 1.05rem;
+}
+
+.app-title {
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.app-version {
+  color: var(--overlay0);
+  font-size: 0.68rem;
+  font-family: monospace;
+  margin-right: auto;
+}
+
+.window-controls {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.wc {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+}
+.wc.minimize { background: var(--peach); color: var(--crust); }
+.wc.maximize { background: var(--green); color: var(--crust); }
+.wc.close    { background: var(--red);   color: var(--crust); }
+
+.app-nav {
+  padding: 0.6rem 0.5rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 7px;
+  cursor: pointer;
+  color: var(--subtext1);
+  font-size: 0.83rem;
+  transition: background 0.15s, color 0.15s;
+  border-left: 2px solid transparent;
+}
+.nav-item:hover {
+  background: var(--surface0);
+  color: var(--text);
+}
+.nav-item.active {
+  background: rgba(203, 166, 247, 0.12);
+  color: var(--mauve);
+  border-left-color: var(--mauve);
+}
+
+.nav-icon {
+  font-size: 0.95rem;
+  width: 20px;
+  text-align: center;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+.nav-divider {
+  height: 1px;
+  background: var(--surface0);
+  margin: 0.4rem 0.8rem;
+}
+
+.app-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--mantle);
+  border-top: 1px solid var(--surface0);
+}
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.status-dot.online {
+  background: var(--green);
+  box-shadow: 0 0 6px rgba(166, 227, 161, 0.6);
+}
+.status-text {
+  color: var(--subtext0);
+  font-size: 0.72rem;
+}

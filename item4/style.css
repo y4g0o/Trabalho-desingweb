@@ -1,0 +1,326 @@
+/* ================================================
+   Catppuccin Mocha — Hyprland Dark
+   Item 4: NovaCast (YouTube-style)
+   ================================================ */
+:root {
+  --crust:    #11111b;
+  --mantle:   #181825;
+  --base:     #1e1e2e;
+  --surface0: #313244;
+  --surface1: #45475a;
+  --overlay0: #6c7086;
+  --text:     #cdd6f4;
+  --subtext0: #a6adc8;
+  --subtext1: #bac2de;
+  --mauve:    #cba6f7;
+  --blue:     #89b4fa;
+  --teal:     #94e2d5;
+  --peach:    #fab387;
+  --red:      #f38ba8;
+  --green:    #a6e3a1;
+
+  --header-h: 52px;
+  --sidebar-w: 200px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--base);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* ---- HEADER ---- */
+
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  background: var(--mantle);
+  border-bottom: 1px solid var(--surface0);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1rem;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: var(--subtext1);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+.menu-toggle:hover { background: var(--surface0); color: var(--text); }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.logo-icon {
+  color: var(--mauve);
+  font-size: 1.15rem;
+}
+.logo-text {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-wrap {
+  display: flex;
+  width: 100%;
+  max-width: 480px;
+}
+.search-input {
+  flex: 1;
+  background: var(--surface0);
+  border: 1px solid var(--surface1);
+  border-right: none;
+  border-radius: 7px 0 0 7px;
+  padding: 0.45rem 0.9rem;
+  color: var(--text);
+  font-size: 0.82rem;
+  outline: none;
+}
+.search-input:focus {
+  border-color: var(--mauve);
+}
+.search-input::placeholder { color: var(--overlay0); }
+
+.search-btn {
+  background: var(--surface1);
+  border: 1px solid var(--surface1);
+  border-left: none;
+  border-radius: 0 7px 7px 0;
+  color: var(--subtext1);
+  cursor: pointer;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.9rem;
+  transition: background 0.15s, color 0.15s;
+}
+.search-btn:hover {
+  background: var(--mauve);
+  color: var(--crust);
+  border-color: var(--mauve);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.notify-btn {
+  background: none;
+  border: none;
+  color: var(--subtext1);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.35rem;
+  border-radius: 50%;
+  transition: background 0.15s;
+}
+.notify-btn:hover { background: var(--surface0); color: var(--text); }
+
+.login-btn {
+  background: rgba(203, 166, 247, 0.12);
+  border: 1px solid var(--mauve);
+  color: var(--mauve);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.38rem 0.9rem;
+  border-radius: 6px;
+  transition: all 0.15s;
+}
+.login-btn:hover {
+  background: var(--mauve);
+  color: var(--crust);
+}
+
+/* ---- LAYOUT ---- */
+
+.layout {
+  display: flex;
+  margin-top: var(--header-h);
+  min-height: calc(100vh - var(--header-h));
+}
+
+/* ---- SIDEBAR ---- */
+
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--mantle);
+  border-right: 1px solid var(--surface0);
+  flex-shrink: 0;
+  position: sticky;
+  top: var(--header-h);
+  height: calc(100vh - var(--header-h));
+  overflow-y: auto;
+}
+
+.sidebar-nav {
+  padding: 0.5rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 7px;
+  cursor: pointer;
+  color: var(--subtext1);
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  border-left: 2px solid transparent;
+}
+.nav-item:hover {
+  background: var(--surface0);
+  color: var(--text);
+}
+.nav-item.active {
+  background: rgba(203, 166, 247, 0.1);
+  color: var(--mauve);
+  border-left-color: var(--mauve);
+  font-weight: 500;
+}
+.nav-icon {
+  font-size: 0.9rem;
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.nav-arrow {
+  margin-left: auto;
+  opacity: 0.5;
+  font-size: 0.75rem;
+}
+
+.nav-divider {
+  height: 1px;
+  background: var(--surface0);
+  margin: 0.4rem 0.5rem;
+}
+
+/* ---- CONTENT ---- */
+
+.content {
+  flex: 1;
+  padding: 1.5rem 1.75rem;
+  min-width: 0;
+}
+
+.section-label {
+  color: var(--subtext0);
+  font-size: 0.82rem;
+  margin-bottom: 1.25rem;
+}
+.section-label strong {
+  color: var(--mauve);
+}
+
+/* ---- VIDEO GRID ---- */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.video-card {
+  cursor: pointer;
+  transition: transform 0.18s;
+}
+.video-card:hover {
+  transform: translateY(-3px);
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 0.65rem;
+  overflow: hidden;
+}
+.duration {
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  letter-spacing: 0.03em;
+}
+
+.card-info {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+}
+
+.channel-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.video-meta {
+  flex: 1;
+  min-width: 0;
+}
+.video-title {
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.channel-name {
+  color: var(--subtext0);
+  font-size: 0.72rem;
+  margin-bottom: 0.15rem;
+}
+.video-stats {
+  color: var(--overlay0);
+  font-size: 0.7rem;
+}

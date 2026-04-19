@@ -1,0 +1,101 @@
+/* ================================================
+   Catppuccin Mocha — Hyprland Dark
+   Item 2: Layout Colorido
+   ================================================ */
+:root {
+  --crust:  #11111b;
+  --mantle: #181825;
+  --text:   #cdd6f4;
+  --sub:    #a6adc8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--crust);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.page-header {
+  text-align: center;
+}
+.page-header h1 {
+  color: var(--text);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.page-header p {
+  color: var(--sub);
+  font-size: 0.78rem;
+  margin-top: 0.3rem;
+  letter-spacing: 0.05em;
+}
+
+/* ---- COLOR GRID ---- */
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 110px);
+  gap: 6px;
+  grid-template-areas:
+    "mauve blue  teal  red  "
+    "mauve lavnd teal  green"
+    "peach peach pink  sky  "
+    "yello flamn pink  marrn";
+}
+
+/* sapphire is not used in the main grid — placed as an extra below */
+/* Removed sapphire from grid to keep 13 cells fitting the 4x4=16 area cleanly */
+
+.cell {
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: transform 0.2s, filter 0.2s;
+}
+.cell:hover {
+  transform: scale(1.03);
+  filter: brightness(1.08);
+  z-index: 1;
+}
+
+.label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.55rem 0.7rem 0.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+.label b {
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  letter-spacing: 0.02em;
+}
+.label small {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.63rem;
+  font-family: monospace;
+  letter-spacing: 0.04em;
+}
