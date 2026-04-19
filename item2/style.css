@@ -1,7 +1,3 @@
-/* ================================================
-   Catppuccin Mocha — Hyprland Dark
-   Item 2: Layout Colorido
-   ================================================ */
 :root {
   --crust:  #11111b;
   --mantle: #181825;
@@ -45,7 +41,6 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* ---- COLOR GRID ---- */
 
 .color-grid {
   display: grid;
@@ -59,8 +54,6 @@ body {
     "yello flamn pink  marrn";
 }
 
-/* sapphire is not used in the main grid — placed as an extra below */
-/* Removed sapphire from grid to keep 13 cells fitting the 4x4=16 area cleanly */
 
 .cell {
   border-radius: 8px;

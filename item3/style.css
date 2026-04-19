@@ -1,7 +1,3 @@
-/* ================================================
-   Catppuccin Mocha — Hyprland Dark
-   Item 3: Gerenciador de Arquivos
-   ================================================ */
 :root {
   --crust:    #11111b;
   --mantle:   #181825;
@@ -37,7 +33,6 @@ body {
   max-width: 860px;
 }
 
-/* ---- WINDOW ---- */
 
 .window {
   background: var(--base);
@@ -52,7 +47,6 @@ body {
   flex-direction: column;
 }
 
-/* ---- TITLEBAR ---- */
 
 .titlebar {
   display: flex;
@@ -97,7 +91,6 @@ body {
 .wc.max  { background: var(--green); color: var(--crust); }
 .wc.close{ background: var(--red);   color: var(--crust); }
 
-/* ---- TOOLBAR ---- */
 
 .toolbar {
   display: flex;
@@ -171,7 +164,6 @@ body {
   color: var(--overlay0);
 }
 
-/* ---- FM BODY ---- */
 
 .fm-body {
   display: flex;
@@ -180,7 +172,6 @@ body {
   min-height: 0;
 }
 
-/* ---- SIDEBAR ---- */
 
 .sidebar {
   width: 180px;
@@ -239,7 +230,6 @@ body {
   margin: 0.4rem 0.5rem;
 }
 
-/* ---- CONTENT ---- */
 
 .content {
   flex: 1;
@@ -281,7 +271,6 @@ body {
   border-color: var(--mauve);
 }
 
-/* ---- FILE LIST ---- */
 
 .file-list {
   flex: 1;
@@ -357,7 +346,6 @@ body {
   text-align: right;
 }
 
-/* ---- STATUS BAR ---- */
 
 .statusbar {
   display: flex;

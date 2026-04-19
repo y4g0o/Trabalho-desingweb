@@ -1,7 +1,3 @@
-/* ================================================
-   Catppuccin Mocha — Hyprland Dark
-   Item 4: NovaCast (YouTube-style)
-   ================================================ */
 :root {
   --crust:    #11111b;
   --mantle:   #181825;
@@ -32,7 +28,6 @@ body {
   min-height: 100vh;
 }
 
-/* ---- HEADER ---- */
 
 .site-header {
   position: fixed;
@@ -162,7 +157,6 @@ body {
   color: var(--crust);
 }
 
-/* ---- LAYOUT ---- */
 
 .layout {
   display: flex;
@@ -170,7 +164,6 @@ body {
   min-height: calc(100vh - var(--header-h));
 }
 
-/* ---- SIDEBAR ---- */
 
 .sidebar {
   width: var(--sidebar-w);
@@ -231,7 +224,6 @@ body {
   margin: 0.4rem 0.5rem;
 }
 
-/* ---- CONTENT ---- */
 
 .content {
   flex: 1;
@@ -248,7 +240,6 @@ body {
   color: var(--mauve);
 }
 
-/* ---- VIDEO GRID ---- */
 
 .video-grid {
   display: grid;
